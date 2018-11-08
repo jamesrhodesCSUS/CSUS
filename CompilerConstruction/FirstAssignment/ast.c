@@ -31,9 +31,6 @@ ASTNode* CreateIdentNode(char* name)
     return node;
 }
 
-// Take a statement node and a statement list node and connect them together
-// to form a bigger statement list node (add the statement to the statement list).
-// Return a pointer to the bigger list that resulted from this linking
 ASTNode* CreateStatementListNode(ASTNode* st, ASTNode* stList)
 {
     ASTNode* node = (ASTNode*)malloc(sizeof(ASTNode));
