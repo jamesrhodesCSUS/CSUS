@@ -1,0 +1,14 @@
+#!/bin/bash
+	make > result.txt
+	EXTENSION=result.txt
+        for i in `seq 1 8`;
+        do
+		FILENAME=test$i
+		NAME=${FILENAME}_${EXTENSION}
+		printf 'Running file' $FILENAME >> $EXTENSION
+		printf '\n' >> $EXTENSION
+                ./bcc tests/test$i.bc > bc.txt
+		printf 'Here is the difference between my bc.txt and his results'>> $EXTENSION
+		printf '\n' >> $EXTENSION
+		diff bc.txt tests/$NAME >> $EXTENSION
+        done

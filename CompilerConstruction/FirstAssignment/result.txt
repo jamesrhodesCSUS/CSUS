@@ -1,0 +1,21 @@
+bison -d BabyC.y
+gcc -c BabyC.tab.c
+flex BabyC.lex
+gcc -c lex.yy.c
+gcc BabyC.tab.o lex.yy.o driver.o ast.o symbol_table.o -o bcc
+Running file
+Here is the difference between my bc.txt and his results
+Running file
+Here is the difference between my bc.txt and his results
+Running file
+Here is the difference between my bc.txt and his results
+Running file
+Here is the difference between my bc.txt and his results
+Running file
+Here is the difference between my bc.txt and his results
+Running file
+Here is the difference between my bc.txt and his results
+Running file
+Here is the difference between my bc.txt and his results
+Running file
+Here is the difference between my bc.txt and his results
